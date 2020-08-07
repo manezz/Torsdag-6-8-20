@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace Torsdag_6_8_20
 
             string vaMid = "\x2500";
             string loMid = "\x2502";
+
+            string kryds = "\x253C";
 
             Console.WriteLine("Hvor stor skal breden være?");
             Console.WriteLine("");
@@ -70,6 +73,9 @@ namespace Torsdag_6_8_20
 
             Console.SetCursorPosition(30 + brede, 8 + lengde);
             Console.Write(bhkant);
+
+            Console.SetCursorPosition(30 + brede / 2, 8 + lengde / 2);
+            Console.Write(kryds);
 
             Console.WriteLine("");
             Console.WriteLine("Press Enter to Exit");
